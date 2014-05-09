@@ -1,0 +1,6 @@
+要使用Box2D物理引擎时，当然要#include "Box2D/Box2D.h"， 当然这里推荐用linux下文件目录的斜杠，而不是反斜杠。
+但是直接这样使用是不行的， 应该要
+1.添加libBox2D项目：..\cocos2d\external\Box2D\proj.win32\Box2D.vcxproj
+2.vs2013中：属性->通用属性->引用->添加新引用
+
+在vs2013完成以上工作，且编译运行成功。那么在发布到Android平台时，再通过build_native.py来生成Android平台的工程即可。不用再进行其他设置。
